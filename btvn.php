@@ -187,3 +187,87 @@ foreach ($products as $product) {
 
 echo "</table>";
 ?>
+<?php
+// ==================== BÀI 1 ====================
+// Kiểm tra số chẵn hay số lẻ
+
+$n = 8;
+
+echo "<h3>Bài 1</h3>";
+
+if ($n % 2 == 0) {
+    echo "$n là số chẵn";
+} else {
+    echo "$n là số lẻ";
+}
+
+echo "<hr>";
+
+
+// ==================== BÀI 2 ====================
+// Xếp hạng học lực dựa trên điểm giữa kỳ và cuối kỳ
+
+echo "<h3>Bài 2</h3>";
+
+$diemGiuaKy = 8;
+$diemCuoiKy = 9;
+
+$diemTrungBinh = ($diemGiuaKy * 30 / 100)
+               + ($diemCuoiKy * 70 / 100);
+
+echo "Điểm trung bình: " . $diemTrungBinh . "<br>";
+
+if ($diemTrungBinh >= 9.0) {
+    echo 'Hạng "Xuất sắc"';
+} elseif ($diemTrungBinh >= 7.0) {
+    echo 'Hạng "Giỏi"';
+} elseif ($diemTrungBinh >= 5.0) {
+    echo 'Hạng "Khá"';
+} else {
+    echo 'Hạng "Trung bình - Yếu"';
+}
+
+echo "<hr>";
+
+
+// ==================== BÀI 3 ====================
+// Kiểm tra năm hiện tại là năm chẵn hay năm lẻ
+
+echo "<h3>Bài 3</h3>";
+
+$namHienTai = date("Y");
+
+if ($namHienTai % 2 == 0) {
+    echo "Năm $namHienTai là năm chẵn";
+} else {
+    echo "Năm $namHienTai là năm lẻ";
+}
+
+echo "<hr>";
+
+
+// ==================== BÀI 4 ====================
+// In các số từ 1 đến 100 bằng vòng lặp for
+
+echo "<h3>Bài 4</h3>";
+
+for ($i = 1; $i <= 100; $i++) {
+    echo $i . " ";
+}
+
+echo "<hr>";
+
+
+// ==================== BÀI 5 ====================
+// Số chẵn in đậm, số lẻ in thường
+
+echo "<h3>Bài 5</h3>";
+
+for ($i = 1; $i <= 100; $i++) {
+    if ($i % 2 == 0) {
+        echo "<strong>$i</strong> ";
+    } else {
+        echo "$i ";
+    }
+}
+?>
